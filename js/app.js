@@ -19,8 +19,8 @@ angular.module('starter', ['ui.router', 'starter.controllers', 'starter.services
             url: 'login',
             views: {
                 mainContent: {
-                    templateUrl: 'templates/login/login.html'
-                    // controller: 'TodoController'
+                    templateUrl: 'templates/login/login.html',
+                    controller: 'Auth'
                 }
             }
         });
