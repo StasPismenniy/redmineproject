@@ -1,4 +1,4 @@
-angular.module('starter', ['ui.router', 'starter.controllers', 'starter.services'])
+var app = angular.module('starter', ['ui.router', 'base64'])
 
 .run(function () {
 
@@ -20,7 +20,7 @@ angular.module('starter', ['ui.router', 'starter.controllers', 'starter.services
             views: {
                 mainContent: {
                     templateUrl: 'templates/login/login.html',
-                    controller: 'Auth'
+                    controller: 'AppCtrl'
                 }
             }
         });

@@ -1,11 +1,23 @@
-angular.module('starter.services', [])
 
-    .controller("Auth", function ($scope, $http) {
 
-        $http.get('https://redmine.ekreative.com/login?')
-            .then(function (data) {
-                console.log(data)
-        });
+    app.factory('Api', function ($http, $base64) {
+        return {
+            login: function (username, password) {
+                console.log('test');
+                var userRequest = {
+                    method: 'POST',
+                    url: 'https://redmine.ekreative.com/users/current.json',
+                    headers:{
+                        Authorization:
+                        'Basic ' + $base64.encode(username + ':' + password)
+                    }
+                };
+                $http(userRequest)
+                    .success(function(data, status) {
+                        console.log(data)
+                    })
+            }
+        };
     });
 
 

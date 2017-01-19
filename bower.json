@@ -1,0 +1,25 @@
+{
+  "name": "template-gulp-sass",
+  "description": "start template with gulp and sass",
+  "main": "index.js",
+  "authors": [
+    "eKreative"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "sass",
+    "gulp",
+    "npm"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-base64": "^2.0.5"
+  }
+}
