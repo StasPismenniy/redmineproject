@@ -13,7 +13,7 @@
                     }
                 };
                 $http(userRequest)
-                    .success(function(data, status) {
+                    .then(function(data, status) {
                         console.log(data)
                     })
             }

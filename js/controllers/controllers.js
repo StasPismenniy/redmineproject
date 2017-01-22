@@ -1,4 +1,12 @@
 app.controller('AppCtrl', function ($scope, Api) {
     console.log('test');
-    Api.login('test', '9uu82T487m6V41G');
+
+    $scope.username = '';
+    $scope.pass = '';
+
+    $scope.login = function () {
+        Api.login($scope.username ,$scope.pass );
+    }
+
+
 });
