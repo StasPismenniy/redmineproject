@@ -5,11 +5,12 @@
             login: function (username, password) {
                 console.log('test');
                 var userRequest = {
-                    method: 'POST',
+                    method: 'GET',
                     url: 'https://redmine.ekreative.com/users/current.json',
                     headers:{
                         Authorization:
-                        'Basic ' + $base64.encode(username + ':' + password)
+                        'Basic ' + $base64.encode(username + ':' + password),
+                        'Content-Type': 'json'
                     }
                 };
                 $http(userRequest)
