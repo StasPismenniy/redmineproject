@@ -1,29 +1,43 @@
-var app = angular.module('starter', ['ui.router', 'base64'])
+var app = angular.module('starter', ['ui.router', 'base64', 'LocalStorageModule'])
 
-.run(function () {
+    .run(function () {
 
-})
+    })
 
-.config(function($stateProvider, $urlRouterProvider) {
-    $stateProvider
+    .config(function (localStorageServiceProvider) {
+        localStorageServiceProvider.setPrefix('demoPrefix');
+    })
 
-        .state('main', {
-            url: '/',
-            templateUrl: 'templates/menu/menu.html',
-            abstract: true
-            // controller: 'starter.controllers'
-        })
+    .config(function ($stateProvider, $urlRouterProvider) {
+        $stateProvider
+
+            .state('main', {
+                url: '/',
+                templateUrl: 'templates/menu/menu.html',
+                abstract: true
+                // controller: 'starter.controllers'
+            })
 
 
-        .state('main.login', {
-            url: 'login',
-            views: {
-                mainContent: {
-                    templateUrl: 'templates/login/login.html',
-                    controller: 'AppCtrl'
+            .state('main.login', {
+                url: 'login',
+                views: {
+                    mainContent: {
+                        templateUrl: 'templates/login/login.html',
+                        controller: 'loginCtrl'
+                    }
                 }
-            }
-        });
+            })
 
-    $urlRouterProvider.otherwise('/login');
-});
+            .state('main.projects', {
+                url: 'projects',
+                views: {
+                    mainContent: {
+                        templateUrl: 'templates/projects/projects.html',
+                        controller: 'projectsCtrl'
+                    }
+                }
+            });
+
+        $urlRouterProvider.otherwise('/login');
+    });
