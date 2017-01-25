@@ -9,23 +9,20 @@ app.factory('Api', function ($http, $base64) {
                     Authorization: 'Basic ' + $base64.encode(username + ':' + password),
                     'Content-Type': 'json'
 
-                    // projects: function (username, password) {
-                    //     var projects = {
-                    //         method: 'GET',
-                    //         url: 'https://redmine.ekreative.com/users/current.json',
-                    //         headers: {
-                    //             Authorization: 'Basic ' + $base64.encode(username + ':' + password),
-                    //             'Content-Type': 'json'
-                    //         }
-                    //     }
-                    // }
                 }
 
             };
-            $http(userRequest)
+            return $http(userRequest)
                 .then(function (data, status) {
                     console.log(data)
                 })
+        },
+
+        get: function(url) {
+            return $http.get('https://redmine.ekreative.com/' + url, {});
+        },
+        post: function(url, data) {
+            return $http.post('https://redmine.ekreative.com/' + url, {}, data);
         }
 
 

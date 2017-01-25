@@ -39,5 +39,5 @@ var app = angular.module('starter', ['ui.router', 'base64', 'LocalStorageModule'
                 }
             });
 
-        $urlRouterProvider.otherwise('/login');
+        $urlRouterProvider.otherwise('/login');// todo
     });
