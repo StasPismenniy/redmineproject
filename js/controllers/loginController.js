@@ -1,4 +1,4 @@
-app.controller('loginCtrl', function ($scope, Api, localStorageService) {
+app.controller('loginCtrl', function ($scope, Api, localStorageService, $state) {
     console.log('test');
 
     $scope.username = '';
@@ -20,9 +20,9 @@ app.controller('loginCtrl', function ($scope, Api, localStorageService) {
         console.log('yes username');
         localStorageService.set('pass', $scope.pass);
         console.log('yes');
-    };
 
-    // $state.go('main.projects');
+        $state.go('main.projects');
+    };
 
 
 });

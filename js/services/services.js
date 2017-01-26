@@ -19,7 +19,13 @@ app.factory('Api', function ($http, $base64) {
         },
 
         get: function(url) {
-            return $http.get('https://redmine.ekreative.com/' + url, {});
+            return $http.get('https://redmine.ekreative.com/projects/current.json' + url, {
+                headers: {
+                    Authorization: 'Basic ' + $base64.encode(username + ':' + password),
+                    'Content-Type': 'json'
+
+                }
+            });
         },
         post: function(url, data) {
             return $http.post('https://redmine.ekreative.com/' + url, {}, data);
