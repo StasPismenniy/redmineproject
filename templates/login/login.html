@@ -1,7 +1,7 @@
 <div class="wrapper">
     <form class="form-signin">
         <h2 class="form-signin-heading">Please login</h2>
-
+        <div ng-if="err"></div>
         <input ng-model="username" type="text" class="form-control" name="username" placeholder="username" required="" autofocus="" />
 
         <input ng-model="pass" type="password" class="form-control" name="password" placeholder="Password" required=""/>

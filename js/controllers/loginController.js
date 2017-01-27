@@ -1,11 +1,12 @@
 app.controller('loginCtrl', function ($scope, Api, localStorageService, $state) {
     console.log('test');
 
-    $scope.username = '';
-    $scope.pass = '';
+
     $scope.pass = localStorageService.get('pass');
     $scope.username = localStorageService.get('username');
     console.log('local');
+
+    $scope.err = false;
 
 
 
@@ -14,7 +15,13 @@ app.controller('loginCtrl', function ($scope, Api, localStorageService, $state) 
     // }
 
     $scope.login = function () {
-        Api.login($scope.username ,$scope.pass );
+        Api.login($scope.username ,$scope.pass )
+            .then(function (data, status) {
+            console.log(data)
+        }, function (data, status) {
+            console.log(data);
+                $scope.err = true
+        });
 
         localStorageService.set('username', $scope.username);
         console.log('yes username');

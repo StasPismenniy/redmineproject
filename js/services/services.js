@@ -13,15 +13,15 @@ app.factory('Api', function ($http, $base64) {
 
             };
             return $http(userRequest)
-                .then(function (data, status) {
-                    console.log(data)
-                })
+
         },
 
         get: function(url) {
-            return $http.get('https://redmine.ekreative.com/projects/current.json' + url, {
+            var pass = localStorageService.get('pass');
+            var username = localStorageService.get('username');
+            return $http.get('https://redmine.ekreative.com/' + url, {
                 headers: {
-                    Authorization: 'Basic ' + $base64.encode(username + ':' + password),
+                    Authorization: 'Basic ' + $base64.encode(username + ':' + pass),
                     'Content-Type': 'json'
 
                 }
