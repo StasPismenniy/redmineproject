@@ -1,4 +1,4 @@
-app.factory('Api', function ($http, $base64) {
+app.factory('Api', function ($http, $base64, localStorageService) {
     return {
         login: function (username, password) {
             console.log('test');
