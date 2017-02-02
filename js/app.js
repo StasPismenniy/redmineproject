@@ -37,6 +37,17 @@ var app = angular.module('starter', ['ui.router', 'base64', 'LocalStorageModule'
                         controller: 'projectsCtrl'
                     }
                 }
+            })
+
+            .state('main.issues', {
+                //url: 'projects/issues',
+                url: 'projects/:id',
+                views: {
+                    mainContent: {
+                        templateUrl: 'templates/issues/issues.html',
+                        controller: 'issuesCtrl'
+                    }
+                }
             });
 
         $urlRouterProvider.otherwise('/login'); //
