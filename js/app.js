@@ -50,7 +50,7 @@ var app = angular.module('starter', ['ui.router', 'base64', 'LocalStorageModule'
             })
 
             .state('main.tracktime', {
-                url: 'tracktime',
+                url: 'tracktime/:id',
                 views: {
                     mainContent: {
                         templateUrl: 'templates/trackTime/trackTime.html',
