@@ -4,7 +4,7 @@ app.controller('projectsCtrl', function ($scope, Api) {
             console.log(data);
 
             $scope.projects = data.data.projects;
-            //console.log($scope.projects);
+            console.log($scope.projects);
         }, function (data, status) {
             console.log(data);
         });

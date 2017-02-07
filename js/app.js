@@ -40,12 +40,21 @@ var app = angular.module('starter', ['ui.router', 'base64', 'LocalStorageModule'
             })
 
             .state('main.issues', {
-                //url: 'projects/issues',
                 url: 'projects/:id',
                 views: {
                     mainContent: {
                         templateUrl: 'templates/issues/issues.html',
                         controller: 'issuesCtrl'
+                    }
+                }
+            })
+
+            .state('main.tracktime', {
+                url: 'tracktime',
+                views: {
+                    mainContent: {
+                        templateUrl: 'templates/trackTime/trackTime.html',
+                        controller: 'trackTimeController'
                     }
                 }
             });
