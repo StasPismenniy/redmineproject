@@ -7,7 +7,7 @@ app.factory('Api', function ($http, $base64, localStorageService) {
                 url: 'https://redmine.ekreative.com/users/current.json',
                 headers: {
                     Authorization: 'Basic ' + $base64.encode(username + ':' + password),
-                    'Content-Type': 'json'
+                    'Content-Type': 'application/json'
 
                 }
 
@@ -22,7 +22,7 @@ app.factory('Api', function ($http, $base64, localStorageService) {
             return $http.get('https://redmine.ekreative.com/' + url, {
                 headers: {
                     Authorization: 'Basic ' + $base64.encode(username + ':' + pass),
-                    'Content-Type': 'json'
+                    'Content-Type': 'application/json'
 
                 }
             });

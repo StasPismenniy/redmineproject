@@ -1,7 +1,7 @@
 app.controller('trackTimeControllerIssue', function ($scope, Api, $stateParams) {
 
-    $scope.hours = time_entry.hours;
-    $scope.comments = time_entry.comments;
+    $scope.hours = null;
+    $scope.comments = null;
 
     $scope.post = function () {
         Api.post('time_entries.json', {
