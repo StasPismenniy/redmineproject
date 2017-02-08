@@ -1,5 +1,6 @@
 <h1>Issues</h1>
 
 <div ng-repeat="idIssues in issues" class="issues-id">
-    {{idIssues.subject}}
+    {{idIssues.subject}} ||
+    <a ui-sref="main.tracktimeissue({id:idIssues.id})">track time</a>
 </div>

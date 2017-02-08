@@ -1,4 +1,4 @@
-app.controller('trackTimeController', function ($scope, Api, $stateParams) {
+app.controller('trackTimeControllerIssue', function ($scope, Api, $stateParams) {
 
     $scope.hours = time_entry.hours;
     $scope.comments = time_entry.comments;
@@ -6,7 +6,7 @@ app.controller('trackTimeController', function ($scope, Api, $stateParams) {
     $scope.post = function () {
         Api.post('time_entries.json', {
             time_entry: {
-                project_id: $stateParams.id,
+                issue_id: $stateParams.id,
                 hours: $scope.hours,
                 spent_on: Date,
                 comments: $scope.comments
@@ -17,3 +17,4 @@ app.controller('trackTimeController', function ($scope, Api, $stateParams) {
 
     }
 });
+

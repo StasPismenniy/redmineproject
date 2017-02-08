@@ -30,13 +30,13 @@ app.factory('Api', function ($http, $base64, localStorageService) {
         post: function(url, data) {
             var pass = localStorageService.get('pass');
             var username = localStorageService.get('username');
-            return $http.post('https://redmine.ekreative.com/' + url, {
+            return $http.post('https://redmine.ekreative.com/' + url, data, {
                 headers: {
                     Authorization: 'Basic ' + $base64.encode(username + ':' + pass),
-                    'Content-Type': 'json'
+                    'Content-Type': 'application/json'
 
                 }
-            }, data);
+            });
         }
 
 

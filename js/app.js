@@ -57,6 +57,15 @@ var app = angular.module('starter', ['ui.router', 'base64', 'LocalStorageModule'
                         controller: 'trackTimeController'
                     }
                 }
+            })
+            .state('main.tracktimeissue', {
+                url: 'tracktimeissue/:id',
+                views: {
+                    mainContent: {
+                        templateUrl: 'templates/trackTimeIssue/trackTimeIssue.html',
+                        controller: 'trackTimeControllerIssue'
+                    }
+                }
             });
 
         $urlRouterProvider.otherwise('/login'); //
