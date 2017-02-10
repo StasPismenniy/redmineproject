@@ -49,12 +49,12 @@ var app = angular.module('starter', ['ui.router', 'base64', 'LocalStorageModule'
                 }
             })
 
-            .state('main.tracktime', {
-                url: 'tracktime/:id',
+            .state('main.tracktimeprojects', {
+                url: 'tracktimeprojects/:id',
                 views: {
                     mainContent: {
-                        templateUrl: 'templates/trackTime/trackTime.html',
-                        controller: 'trackTimeController'
+                        templateUrl: 'templates/trackTimeProjects/trackTimeProjects.html',
+                        controller: 'trackTimeControllerProjects'
                     }
                 }
             })
@@ -64,6 +64,15 @@ var app = angular.module('starter', ['ui.router', 'base64', 'LocalStorageModule'
                     mainContent: {
                         templateUrl: 'templates/trackTimeIssue/trackTimeIssue.html',
                         controller: 'trackTimeControllerIssue'
+                    }
+                }
+            })
+            .state('main.about', {
+                url: 'about',
+                views: {
+                    mainContent: {
+                        templateUrl: 'templates/about/about.html',
+                        controller: ''
                     }
                 }
             });
