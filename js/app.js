@@ -15,7 +15,6 @@ var app = angular.module('starter', ['ui.router', 'base64', 'LocalStorageModule'
                 url: '/',
                 templateUrl: 'templates/menu/menu.html',
                 abstract: true
-                // controller: 'starter.controllers'
             })
 
 
@@ -73,6 +72,24 @@ var app = angular.module('starter', ['ui.router', 'base64', 'LocalStorageModule'
                     mainContent: {
                         templateUrl: 'templates/about/about.html',
                         controller: ''
+                    }
+                }
+            })
+            .state('main.comments', {
+                url: 'comments',
+                views: {
+                    mainContent: {
+                        templateUrl: 'templates/comments/comments.html',
+                        controller: 'commentsController'
+                    }
+                }
+            })
+            .state('main.tracktime', {
+                url: 'tracktime',
+                views: {
+                    mainContent: {
+                        templateUrl: 'templates/trackTime/trackTime.html',
+                        controller: 'trackTimeController'
                     }
                 }
             });

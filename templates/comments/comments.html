@@ -1,0 +1,18 @@
+<h1>Comment</h1>
+
+<div>
+    <input ng-model="commentsForm.commentsDescription" placeholder="description">
+
+    <button ng-click="addComment(commentsForm)">Add</button>
+
+    <ul>
+        <li ng-repeat="commentsItem in commentsList">
+            <span>{{ commentsItem.commentsDescription }}</span>
+            <!--{{ todoItem.completed }}-->
+            <!--<button ng-click="remove(todoItem)">Remove</button>-->
+            <!--<button ng-click="edit(todoItem)">Edit</button>-->
+
+        </li>
+    </ul>
+
+</div>
