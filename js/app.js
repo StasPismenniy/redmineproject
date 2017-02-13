@@ -9,6 +9,7 @@ var app = angular.module('starter', ['ui.router', 'base64', 'LocalStorageModule'
     })
 
     .config(function ($stateProvider, $urlRouterProvider) {
+        $urlRouterProvider.otherwise('');
         $stateProvider
 
             .state('main', {

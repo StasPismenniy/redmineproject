@@ -3,3 +3,20 @@
     margin: 0 auto;
     padding: 0 5px;
 }
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+a {
+    color: #000;
+    &:hover {
+        
+    }
+}
+
+input,
+select {
+    margin-bottom: 10px;
+}

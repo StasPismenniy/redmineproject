@@ -1,13 +1,24 @@
-<div class="menu">
-    <ul>
-        <li>
-            <a ui-sref="main.login">login</a>
-            <a ui-sref="main.projects">Projects</a>
-            <a ui-sref="main.about">About</a>
-            <a ui-sref="main.comments">Comments</a>
-            <a ui-sref="main.tracktime">Track the time</a>
-        </li>
-    </ul>
-</div>
+<section class="menu wrapper">
+    <nav>
+        <ul>
+            <li>
+                <a ui-sref="main.login">login</a>
+            </li>
+            <li>
+                <a ui-sref="main.projects">Projects</a>
+            </li>
+            <li>
+                <a ui-sref="main.about">About</a>
+            </li>
+            <li>
+                <a ui-sref="main.comments">Comments</a>
+            </li>
+            <li>
+                <a ui-sref="main.tracktime">Track the time</a>
+            </li>
+        </ul>
+    </nav>
+
+</section>
 
 <ui-view name="mainContent"></ui-view>

@@ -1,18 +1,19 @@
-<h1>Comment</h1>
+<section class="wrapper">
+    <h1>Comments</h1>
 
-<div>
-    <input ng-model="commentsForm.commentsDescription" placeholder="description">
+    <div>
+        <input type="text" ng-model="commentsForm.commentsDescription" placeholder="comment">
 
-    <button ng-click="addComment(commentsForm)">Add</button>
+        <button ng-click="addComment(commentsForm)">Add</button>
 
-    <ul>
-        <li ng-repeat="commentsItem in commentsList">
-            <span>{{ commentsItem.commentsDescription }}</span>
-            <!--{{ todoItem.completed }}-->
-            <!--<button ng-click="remove(todoItem)">Remove</button>-->
-            <!--<button ng-click="edit(todoItem)">Edit</button>-->
+        <ul>
+            <li ng-repeat="commentsItem in commentsList">
+                <span>{{ commentsItem.commentsDescription }}</span>
+                <button ng-click="remove(commentsItem)">Remove</button>
 
-        </li>
-    </ul>
+            </li>
+        </ul>
 
-</div>
+    </div>
+</section>
+

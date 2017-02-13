@@ -1,20 +1,23 @@
-<h1>trackTimeIssue</h1>
+<section class="wrapper">
 
-<form>
-    <div>
-        <label for="time_entry">Date:</label>
-        <input type="date" name="date" id="time_entry">
-    </div>
-    <div>
-        <label for="time_entry_hours">time:</label>
-        <input ng-model="hours" size="6" type="text" name="time_entry[hours]" id="time_entry_hours">
-    </div>
-    <div>
-        <label  for="time_entry_comments">Comment:</label>
-        <input ng-model="comments" size="100" maxlength="1024" type="text" name="time_entry[comments]" id="time_entry_comments">
-    </div>
-    <div>
-        <input ng-click="post()" type="submit" name="commit" value="submit">
-    </div>
+    <h1>trackTimeIssue</h1>
 
-</form>
+    <form>
+        <div>
+            <label for="time_entry">Date:</label>
+            <input type="date" name="date" id="time_entry">
+        </div>
+        <div>
+            <label for="time_entry_hours">time:</label>
+            <input ng-model="hours" size="6" type="text" name="time_entry[hours]" id="time_entry_hours">
+        </div>
+        <div>
+            <label  for="time_entry_comments">Comment:</label>
+            <input ng-model="comments" size="100" maxlength="1024" type="text" name="time_entry[comments]" id="time_entry_comments">
+        </div>
+        <div>
+            <input ng-click="post()" type="submit" name="commit" value="submit">
+        </div>
+
+    </form>
+</section>
